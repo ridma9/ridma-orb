@@ -3,6 +3,6 @@ version: 2.1
 description: >
   Add two numbers Ridma Kaveendra Learning Orbs 2022/12/30 description of orbs what this orb does
 display:
-  home_url: "https://www.circleci.com/docs"
+  home_url: "https://www.circleci.com"
   source_url: "https://bitbucket.org/ridmak/testing-orb"
 
