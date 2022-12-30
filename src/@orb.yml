@@ -4,5 +4,5 @@ description: >
   Add two numbers Ridma Kaveendra Learning Orbs 2022/12/30 description of orbs what this orb does
 display:
   home_url: "https://www.circleci.com/docs"
-  source_url: "https://RidmaK@bitbucket.org/ridmak/testing-orb.git"
+  source_url: "https://bitbucket.org/ridmak/testing-orb"
 
