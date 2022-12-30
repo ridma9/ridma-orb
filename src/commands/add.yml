@@ -10,7 +10,7 @@ parameters:
 steps:
   - run:
       environment:
-        PARAM_numA: <<parameters.numA>>
-        PARAM_numB: <<parameters.numB>>
+        PARAM_NUMA: <<parameters.numA>>
+        PARAM_NUMB: <<parameters.numB>>
       name: Adding <<parameters.numA>> + <<parameters.numB>>
       command: <<include(scripts/add.sh)>>

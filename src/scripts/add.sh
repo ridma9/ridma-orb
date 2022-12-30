@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Hello $(("${PARAM_numA}" + "${PARAM_numB}"))
+echo $(("${PARAM_NUMA}" + "${PARAM_NUMB}"))
