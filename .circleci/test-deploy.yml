@@ -16,7 +16,9 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - testing/greet
+      - testing/add:
+          numA: 2
+          numB: 2
 workflows:
   test-deploy:
     jobs:
@@ -39,4 +41,24 @@ workflows:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
 
+  test-deploy2:
+    jobs:
+      # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
+      - command-tests:
+          filters: *filters
+      - orb-tools/pack:
+          filters: *filters
+      - orb-tools/publish:
+          orb-name: ridmatest/testing
+          vcs-type: << pipeline.project.type >>
+          pub-type: production
+          requires:
+            - orb-tools/pack
+            - command-tests
+          context: orb-publishing
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
 # VS Code Extension Version: 1.4.0

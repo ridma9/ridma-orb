@@ -18,6 +18,7 @@ workflows:
       - orb-tools/review:
           filters: *filters
       - shellcheck/check:
+          #exclude:
           filters: *filters
       - orb-tools/publish:
           orb-name: ridmatest/testing

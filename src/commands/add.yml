@@ -1,0 +1,16 @@
+description: >
+  This command add two integer numbers together
+parameters:
+  numA:
+    type: integer
+    description: "First Number"
+  numB:
+    type: integer
+    description: "Second Number"
+steps:
+  - run:
+      environment:
+        PARAM_NUMA: <<parameters.numA>>
+        PARAM_NUMB: <<parameters.numB>>
+      name: Adding <<parameters.numA>> + <<parameters.numB>>
+      command: <<include(scripts/add.sh)>>
